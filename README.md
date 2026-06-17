@@ -60,21 +60,34 @@ flowchart LR
 | Wiki | Synthesised, cross-linked BA knowledge | `sample-wiki/` |
 | Schema | Rules for agents and humans | `AGENTS.md`, `CLAUDE.md`, `prompts/`, `templates/` |
 
-## Folder structure
+## Logical structure
 
-```
+The public GitHub upload presents the repository as standalone Markdown files, but the knowledge system is conceptually organised into the following layers:
+
+```text
 ba-knowledge-system-portfolio/
 ├── README.md
-├── docs/                    # System documentation
-├── sample-raw/              # Public metadata & synthetic sources only
-├── sample-wiki/             # LLM-maintained sample wiki
-├── prompts/                 # Agent prompt templates
-├── templates/               # Page and source templates
-├── AGENTS.md                # Agent schema (public)
-├── CLAUDE.md                # Agent schema (public)
 ├── LICENSE
-└── .gitignore
+├── AGENTS.md                         # Agent operating rules
+├── CLAUDE.md                         # Claude-specific working rules
+├── system documentation              # system overview, architecture, workflows, source policy, privacy checks
+├── sample raw inputs                  # job-market signals, article metadata, paper metadata, synthetic project note
+├── sample wiki outputs                # BA concepts, methods, deliverables, career pages, role taxonomy
+├── prompts                            # ingest, query, and lint workflows
+└── templates                          # reusable page and source templates
 ```
+
+The architecture diagram above shows the intended operating model:
+
+```text
+raw source material
+→ wiki synthesis
+→ schema, prompts, templates, and agent rules
+```
+
+In a private working version, these files can be maintained in folders such as `docs/`, `sample-raw/`, `sample-wiki/`, `prompts/`, and `templates/`.
+In this public portfolio version, the emphasis is on demonstrating the system design, sanitised content, and workflow logic rather than preserving the internal working folder layout.
+
 
 ## Source selection policy
 
