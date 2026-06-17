@@ -9,3 +9,18 @@
 private/
 raw/
 wiki/
+
+# macOS generated files
+.DS_Store
+__MACOSX/
+
+# Saved browser pages
+workflow.htm
+workflow_files/
+Yeekaaaa*.html
+
+# Local secrets
+.env
+.env.*
+!.env.example
+Yeekaaaa*_files/
